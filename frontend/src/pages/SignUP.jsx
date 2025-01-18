@@ -1,4 +1,3 @@
-import '../pageStyles/SignUP.css'
 import { Link } from 'react-router-dom';
 import WelcomeSign from '../components/WelcomeSign/WelcomeSign';
 import { useState } from 'react';

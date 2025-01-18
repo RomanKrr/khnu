@@ -3,7 +3,7 @@ import WelcomeSign from '../components/WelcomeSign/WelcomeSign';
 import { useState } from 'react';
 import { useAuthStore } from '../store/useAuthStore';
 import toast from 'react-hot-toast';
-import '../pageStyles/SignUp.css'
+import '../App.css'
 
 const SignUP = () => {
     const [formData, setFormData] = useState({

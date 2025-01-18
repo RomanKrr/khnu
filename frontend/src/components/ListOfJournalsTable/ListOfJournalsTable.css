@@ -1,0 +1,10 @@
+.journals-section p{
+    color: black;
+    margin: 0;
+}
+.journals-section td, .journals-section th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    word-wrap: break-word;
+}

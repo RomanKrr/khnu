@@ -1,0 +1,38 @@
+.year-section {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    width: 80%;
+    color: black;
+}
+.table{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: black;
+}
+
+.year-section p{
+    color: black;
+    margin: 0;
+}
+.year-section td, .year-section th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+.pointer-cell {
+    cursor: pointer; 
+}
+
+.pointer-cell:hover {
+    background-color: #f0f0f0;
+}

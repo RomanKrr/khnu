@@ -1,0 +1,10 @@
+.scheduleBy{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 2rem;
+}
+
+tr td:first-child{
+    cursor: pointer;
+}

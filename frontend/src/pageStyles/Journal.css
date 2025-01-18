@@ -1,0 +1,12 @@
+.journal_header {
+    text-align: center;
+    margin: 0;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.55em;
+}
+.year-sections {
+    padding: 0.5rem 1rem 5rem 1rem;
+}

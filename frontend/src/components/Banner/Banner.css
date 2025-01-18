@@ -1,0 +1,47 @@
+.banner {
+    padding: 10px;
+    background-color: rgba(229, 255, 253, 0.68);
+    position: relative;
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+
+.banner_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_logo img {
+    position: absolute;
+    left: 10px;
+    top: 25%;
+    z-index: 1;
+    opacity: 50%;
+}
+
+.banner_info {
+    z-index: 12;
+    text-align: center;
+    font-family: "Mulish", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.department_name {
+    margin-bottom: 0;
+}
+.specialty_name {
+    margin-top: 8px;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}

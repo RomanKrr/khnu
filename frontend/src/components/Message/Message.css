@@ -1,0 +1,60 @@
+.message {
+    border-radius: 20px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
+}
+
+.message_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: start;
+}
+
+.subjectName {
+    margin: 0;
+    top: 0;
+    color: #4C4C4C;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.message_text {
+    margin: 0;
+    font-family: "Mulish", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.35em;
+    margin: 1rem;
+}
+
+.cross {
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.date {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    margin: 0;
+    color: #4C4C4C;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}

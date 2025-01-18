@@ -1,0 +1,59 @@
+.student {
+    width: 100%;
+}
+
+.student_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.student_image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.student_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 20px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.student_pib {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.student_birthday {
+    margin-bottom: 8px;
+}
+
+.student_label {
+    font-weight: bold;
+    margin: 0;
+}
+
+.id-book {
+    margin: 0;
+}
+
+
+@media (min-width: 850px) {
+    .student_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}

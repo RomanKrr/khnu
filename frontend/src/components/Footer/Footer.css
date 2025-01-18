@@ -1,0 +1,21 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    /* background-color: rgba(0, 101, 164, 0.68); */
+    background-color: #2978A0;
+    width: 100%;
+    z-index: 998;
+}
+
+
+.footer_sign p {
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.79em;
+    margin: 0;
+}

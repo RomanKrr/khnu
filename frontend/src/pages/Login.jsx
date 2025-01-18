@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import WelcomeSign from '../components/WelcomeSign/WelcomeSign';
 import { useState } from 'react';
 import { useAuthStore } from '../store/useAuthStore';
+import '../pageStyles/signUp.css'
 
 const Login = () => {
     const [formData, setFormData] = useState({

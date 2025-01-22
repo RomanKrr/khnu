@@ -4,7 +4,7 @@ import Main from "../components/Main/Main";
 const HomePage = () => {
     return (
         <div>
-            <Banner/>
+            {/* <Banner/> */}
             {/* <Navigation/> */}
             <Main/>
         </div>

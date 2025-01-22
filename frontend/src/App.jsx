@@ -26,6 +26,7 @@ import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs'
 import Notification from './pages/Notification'
 import WorkExperience from './pages/WorkExperience'
 import StudentOrders from './pages/StudentOrders'
+import HomeLayout from './components/HomeLayout'
 
 function App() {
   const { authUser, checkAuth } = useAuthStore();
@@ -34,14 +35,11 @@ function App() {
     checkAuth();
   }, [checkAuth])
 
-  // console.log({authUser});
 
   return (
-    <>
-      {/* <Breadcrumbs /> */}
+    <div className=''>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
           <Route path="/allYears" element={<AllYears />} />
           <Route path="/electiveDisciplines" element={<ElectiveDisciplines />} />
           <Route path="/ratingOfSpecialties" element={<RatingOfSpecialties />} />
@@ -63,10 +61,14 @@ function App() {
           <Route path='/login' element={!authUser ? <Login /> : <Navigate to="/" />} />
           <Route path='/signUP' element={!authUser ? <SignUP /> : <Navigate to="/" />} />
         </Route>
+
+        <Route element={<HomeLayout />}>
+          <Route index="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
+        </Route>
       </Routes>
 
       <Toaster />
-    </>
+    </div>
   )
 }
 

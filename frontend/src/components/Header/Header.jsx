@@ -92,9 +92,7 @@ const Header = () => {
                     </nav>
                 </div>
             </div>
-            <div className="wrp">
                 {openAlert && <Alert onConfirm={logout} onCancel={handleCancel} />}
-            </div>
         </header>
     );
 }

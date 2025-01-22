@@ -40,8 +40,8 @@ export const signup = async (req, res) => {
         });
 
         if (newUser) {
-            generateToken(newUser._id, res);  
-            await newUser.save();  
+            generateToken(newUser._id, res);
+            await newUser.save();
 
             res.status(201).json({
                 _id: newUser._id,
@@ -89,6 +89,11 @@ export const login = async (req, res) => {
             fullName: user.fullName,
             email: user.email,
             profilePic: user.profilePic,
+            gradeBookId: user.gradeBookId,
+            facultyName: user.facultyName,
+            department: user.department,
+            group: user.group,
+            course: user.course,
         })
     } catch (error) {
         console.log("Error in login controller", error.message);

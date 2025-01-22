@@ -1,3 +1,6 @@
+:root{
+  
+}
 .simple_text p {
   margin-top: 5rem;
   position: absolute;
@@ -98,3 +101,155 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.dark-theme {
+  background-color: #121212;
+  /* Чорний фон */
+  color: #e0e0e0;
+  /* Світлий текст */
+}
+
+header.dark-theme {
+  background-color: #1f1f1f;
+  /* Трохи світліший чорний для хедера */
+  border-bottom: 1px solid #333333;
+  /* Роздільна лінія */
+}
+
+footer.dark-theme {
+  background-color: #1f1f1f;
+  border-top: 1px solid #333333;
+  color: #b3b3b3;
+  /* Блідий текст */
+}
+
+nav.dark-theme a {
+  color: #e0e0e0;
+  /* Посилання світлого кольору */
+  text-decoration: none;
+}
+
+nav.dark-theme a:hover {
+  color: #ffffff;
+  /* Яскравий білий при наведенні */
+  text-decoration: underline;
+}
+
+button.dark-theme {
+  background-color: #333333;
+  /* Темно-сірий фон */
+  color: #e0e0e0;
+  /* Світлий текст */
+  border: 1px solid #444444;
+  /* Контур */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.dark-theme:hover {
+  background-color: #444444;
+  /* Злегка яскравіший фон */
+  color: #ffffff;
+  /* Яскравий білий текст */
+}
+
+input.dark-theme,
+textarea.dark-theme {
+  background-color: #1e1e1e;
+  /* Темно-сірий фон */
+  color: #e0e0e0;
+  /* Світлий текст */
+  border: 1px solid #333333;
+  /* Контур */
+  padding: 8px;
+  border-radius: 4px;
+}
+
+input.dark-theme::placeholder,
+textarea.dark-theme::placeholder {
+  color: #a9a9a9;
+  /* Блідий текст для плейсхолдера */
+}
+
+table.dark-theme {
+  background-color: #1a1a1a;
+  /* Темний фон таблиці */
+  color: #e0e0e0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.dark-theme th,
+table.dark-theme td {
+  border: 1px solid #333333;
+  /* Роздільники */
+  padding: 10px;
+  text-align: left;
+}
+
+table.dark-theme th {
+  background-color: #222222;
+  /* Трохи світліший фон для заголовків */
+  color: #ffffff;
+  /* Білий текст */
+}
+
+a.dark-theme {
+color: #4a90e2;
+/* Світло-синє посилання */
+}
+
+a.dark-theme:hover {
+  color: #5bb6ff;
+  /* Яскраво-синє при наведенні */
+}
+
+blockquote.dark-theme {
+  background-color: #1c1c1c;
+  /* Темний фон */
+  border-left: 5px solid #4a90e2;
+  /* Синій акцент */
+  color: #e0e0e0;
+  padding: 10px 15px;
+}
+
+code.dark-theme {
+  background-color: #1e1e1e;
+  /* Темно-сірий фон */
+  color: #4cd137;
+  /* Світло-зелений текст */
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+
+.dark-theme {
+  background-color: #1c1917; /* Для темної теми */
+  color: white; /* Світлий текст */
+  font-family: Arial, sans-serif;
+  border-color: white;
+}
+

@@ -16,7 +16,7 @@
     font-weight: 500;
     font-style: normal;
     font-size: 1.35em;
-    color: black;
+    color: var(--text-color);
 }
 
 .toggle_container {

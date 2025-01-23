@@ -37,7 +37,7 @@ function App() {
 
 
   return (
-    <div className=''>
+    <div className='main'>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/allYears" element={<AllYears />} />

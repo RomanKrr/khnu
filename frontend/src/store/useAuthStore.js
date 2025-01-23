@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000" : "/";
 export const useAuthStore = create((set) => ({
     authUser: null,
+    ratingUsers: [],
     isSigningUp: false,
     isLogginingIn: false,
     isUpdatingProfile: false,
@@ -48,7 +49,7 @@ export const useAuthStore = create((set) => ({
             toast.success("Ви увійшли в акаунт");
         } catch (error) {
             toast.error(error.response.data.message);
-        }finally {
+        } finally {
             set({ isLogginingIn: false });
         }
     },
@@ -56,7 +57,7 @@ export const useAuthStore = create((set) => ({
     logout: async () => {
         try {
             const res = await axiosInstance.post("/auth/logout");
-            set({authUser: null});
+            set({ authUser: null });
             toast.success("Ви вийшли з акаунта")
         } catch (error) {
             toast.error(error.response.data.message);
@@ -64,17 +65,26 @@ export const useAuthStore = create((set) => ({
     },
 
     updateProfile: async (data) => {
-        set({isUpdatingProfile: true});
+        set({ isUpdatingProfile: true });
         try {
             const res = await axiosInstance.put("/auth/update-profile", data);
             set({ authUser: res.data });
             toast.success("Фото оновлено");
         } catch (error) {
             console.log("Error in update-profile");
-            
+
             toast.error(error.response.data.message);
-        }finally{
+        } finally {
             set({ isUpdatingProfile: false });
         }
+    },
+
+    fetchRatingUsers: async () => {
+        try {
+            const res = await axiosInstance.get("/rating/rating"); // Запит до бекенду
+            set({ ratingUsers: res.data }); // Збереження користувачів у стан
+        } catch (error) {
+            console.error("Error fetching rating users:", error);
+        } 
     }
 }))

@@ -8,13 +8,13 @@ import Footer from './Footer/Footer';
 const HomeLayout = () => {
     return (
         <div>
-            <div className="main-content">
+            <section className="main-content">
                 <Header/>
                 <Banner/>
-                {/* <Breadcrumbs/> */}
+                <Breadcrumbs/>
                 <Outlet />
                 <Footer/>
-            </div>
+            </section>
         </div>
     )
 }

@@ -61,7 +61,7 @@
     position: fixed;
     transition: right 0.52s ease, opacity 0.42s ease;
     z-index: 999;
-    background: white;
+    background-color: var(--bg-color);
     box-shadow: 0 1.5px 3.5px rgba(0, 0, 0, 0.1);
 }
 
@@ -74,8 +74,8 @@
 .dropdown_info {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid black;
-    width: 110%;
+    border-bottom: 1px solid  var(--text-color);
+    width: 106%;
     padding: 0px 25px;
 }
 
@@ -86,7 +86,8 @@
     font-weight: 300;
     font-style: normal;
     font-size: 1.2em;
-    text-align: start
+    text-align: start;
+    color: var(--text-color);
 }
 
 .student_number {
@@ -108,13 +109,13 @@
     padding: 20px 10px 0px 10px;
 }
 
-.dropdown_links a,
-li {
-    color: black;
+ul li{
+    cursor: pointer;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    color: var(--text-color);
 }
 
 .logOutbtn {
@@ -164,6 +165,4 @@ li {
     }
 }
 
-.wrp {
-}
-
+.wrp {}

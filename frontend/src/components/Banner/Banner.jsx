@@ -1,5 +1,5 @@
 import '../Banner/Banner.css';
-import DepartmentLogo from '../../assets/image.png.jpeg';
+import DepartmentLogo from '../../assets/kiis.png';
 import { useAuthStore } from '../../store/useAuthStore';
 
 const Banner = () => {

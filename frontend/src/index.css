@@ -25,10 +25,7 @@
   outline: none;
 }
 
-html,
-body {
-  min-width: 320px;
-}
+
 
 body {
   color: #000000;

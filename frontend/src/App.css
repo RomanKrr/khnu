@@ -1,6 +1,15 @@
-:root{
-  
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --bread-text-color: #4C4C4C;
 }
+
+.dark-theme {
+  --bg-color: #1c1917;
+  --text-color: #e8e8e8;
+  --bread-text-color: #c4c4c4;
+}
+
 .simple_text p {
   margin-top: 5rem;
   position: absolute;
@@ -17,6 +26,7 @@
 
 
 
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -24,7 +34,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .welcome {
@@ -218,8 +228,8 @@ table.dark-theme th {
 }
 
 a.dark-theme {
-color: #4a90e2;
-/* Світло-синє посилання */
+  color: #4a90e2;
+  /* Світло-синє посилання */
 }
 
 a.dark-theme:hover {
@@ -247,9 +257,30 @@ code.dark-theme {
 
 
 .dark-theme {
-  background-color: #1c1917; /* Для темної теми */
-  color: white; /* Світлий текст */
+  background-color: #1c1917;
+  /* Для темної теми */
+  color: white;
+  /* Світлий текст */
   font-family: Arial, sans-serif;
   border-color: white;
 }
 
+#root{
+  height: 100vh;
+}
+.main{
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.main.dark-theme{
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.5s ease-in-out;
+}
+
+/* section, header{
+  background-color: #1c1917;
+  color: #cccbcb;
+  height: 100%;
+} */

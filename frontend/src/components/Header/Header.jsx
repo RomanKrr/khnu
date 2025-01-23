@@ -11,6 +11,7 @@ import { CiBellOn } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import { useAuthStore } from '../../store/useAuthStore';
 import Alert from '../Alert/Alert';
+import { useThemeStore } from '../../store/useThemeStore';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -18,6 +19,7 @@ const Header = () => {
     const avatarRef = useRef(null);
 
     const [openAlert, setOpenAlert] = useState(false);
+    const { theme, setTheme } = useThemeStore();
 
     const { logout, authUser } = useAuthStore();
 
@@ -25,8 +27,8 @@ const Header = () => {
         setOpen(!open);
     }
     const handleLogoutClick = () => {
-        openDropdown(); // Викликаємо функцію для відкриття/закриття dropdown
-        logout(); // Викликаємо функцію для виходу з системи
+        openDropdown();
+        logout();
     };
 
     useEffect(() => {
@@ -47,6 +49,22 @@ const Header = () => {
 
     const handleCancel = () => {
         setOpenAlert(false);
+    };
+
+    useEffect(() => {
+        const main = document.getElementsByClassName("main")[0];
+        if (main) {
+            if (theme === 'dark-theme') {
+                main.classList.add("dark-theme");
+            } else {
+                main.classList.remove("dark-theme");
+            }
+        }
+    }, [theme]);
+
+    const changeTheme = () => {
+        const newTheme = theme === "dark-theme" ? "light-theme" : "dark-theme";
+        setTheme(newTheme); 
     };
     return (
         <header>
@@ -86,13 +104,13 @@ const Header = () => {
                                 <li onClick={() => openDropdown()}>Досягнення</li>
                             </Link>
                             <li onClick={() => openDropdown()}>Мова</li>
-                            <li onClick={() => openDropdown()}>Тема <GoSun className='sun icon' /></li>
+                            <li onClick={() => changeTheme()}>Тема <GoSun className='sun icon' /></li>
                             <li className='logOutbtn' onClick={() => setOpenAlert(!openAlert)} >Вийти з системи <IoIosLogOut className='icon' /></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-                {openAlert && <Alert onConfirm={logout} onCancel={handleCancel} />}
+            {openAlert && <Alert onConfirm={logout} onCancel={handleCancel} />}
         </header>
     );
 }

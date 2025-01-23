@@ -12,14 +12,14 @@
 }
 
 .student_image {
-    max-width: 150px;
+    width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 2px solid #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 .student_image img {
@@ -90,7 +90,7 @@
 
 .student_image {
     position: relative;
-
+    
 }
 
 .default_avatar {
@@ -128,4 +128,15 @@
 /* Сховати стандартний інпут */
 .camera_button input {
     display: none;
+}
+
+.load {
+    color: var(--text-color);
+    font-size: 2em;
+    background: var(--bg-color);
+    padding: 1rem;
+    font-family: "Mulish", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }

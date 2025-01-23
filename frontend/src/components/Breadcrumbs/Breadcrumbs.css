@@ -1,7 +1,7 @@
 .nav {
-    margin-top: 0.7rem;
-    margin-bottom: 1rem;
-    margin-left: 10px;
+    padding-top: 0.7rem;
+    padding-bottom: 1rem;
+    padding-left: 10px;
 }
 
 .nav_links {
@@ -12,7 +12,7 @@
 }
 
 .nav_links p {
-    color: #4C4C4C;
+    color: var(--bread-text-color);
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -22,7 +22,7 @@
 }
 
 .page_name {
-    color: #4C4C4C;
+    color: var(--bread-text-color);
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 400;

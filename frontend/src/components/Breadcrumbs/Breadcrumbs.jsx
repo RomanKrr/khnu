@@ -32,7 +32,7 @@ const Breadcrumbs = () => {
           <Link to="/" onClick={() => setBreadcrumbs([])}>
             <p className='page_name'>Головна</p>
           </Link>
-          {breadcrumbs.map((name, index) => {
+          {/* {breadcrumbs.map((name, index) => {
             const routeTo = `/${breadcrumbs.slice(0, index + 1).join('/')}`;
 
             return (
@@ -47,7 +47,23 @@ const Breadcrumbs = () => {
                 </Link>
               </li>
             );
+          })} */}
+          {breadcrumbs.map((name, index) => {
+            const routeTo = `/${breadcrumbs.slice(0, index + 1).join('/')}`;
+            return (
+              <li key={`${name}-${index}`} className='pages_container'> {/* Унікальний ключ */}
+                <span>/</span>
+                <Link
+                  className='page_name'
+                  to={routeTo}
+                  onClick={() => handleBreadcrumbClick(index)}
+                >
+                  {name.charAt(0).toUpperCase() + name.slice(1)}
+                </Link>
+              </li>
+            );
           })}
+
         </div>
       </div>
     </section>

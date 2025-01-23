@@ -1,37 +1,48 @@
-.main_container{
+.main_container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.accordion_item{
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    background-color: var(--bg-color);
+    color: black;
+}
+
+.accordion_item {
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-color);
 }
-.accordion-item:focus, 
-.accordion-item:focus-visible, 
+
+.accordion-item:focus,
+.accordion-item:focus-visible,
 .accordion-item button:focus {
     outline: none;
     box-shadow: none;
     background-color: rgb(255, 255, 255);
-    color: black;
+    color: var(--text-color);
 }
 
-.accordion-item:first-of-type>.accordion-header .accordion-button{
-    background-color: rgb(255, 255, 255);
-    color: black;
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
-.accordion_container{
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+.accordion_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 
-.accordion_container h2{
+.accordion_container h2 {
     margin: 0;
     padding: 0;
     font-family: "Mulish", serif;
@@ -40,22 +51,24 @@
     font-style: normal;
     font-size: 1.35em;
 }
-.accordion-button::after{
+
+.accordion-button::after {
     position: absolute;
     right: 50%;
     bottom: 5%;
 }
 
-.accordion_icon{
+.accordion_icon {
     position: absolute;
     right: 5%;
     font-size: 1.42em;
 }
 
-.accordion-body{
+.accordion-body {
     padding: 13px 32px;
 }
-.accordion_links{
+
+.accordion_links {
     margin: 0;
     padding: 0;
     display: flex;
@@ -63,9 +76,9 @@
     gap: 1rem;
 }
 
-.accordion_links a{
-    text-decoration: none; 
-    color: #000000; 
+.accordion_links a {
+    text-decoration: none;
+    color: var(--text-color);
     font-family: "Mulish", serif;
     font-optical-sizing: auto;
     font-weight: 500;

@@ -15,3 +15,11 @@ export const getRating = async (req, res) => {
         res.status(500).json({ message: "Server error" });
     }
 }
+
+export const getMarks = async (req, res) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}

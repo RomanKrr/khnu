@@ -22,25 +22,32 @@ const userSchema = new mongoose.Schema(
         },
         gradeBookId: {
             type: Number,
-            required: true,
             unique: true,
         },
         facultyName: {
             type: String,
-            required: true,
         },
         department: {
             type: String,
-            required: true,
         },
         group: {
             type: String,
-            required: true,
         },
         course: {
             type: Number,
-            required: true,
-        }
+        },
+        subjects: [
+            {
+                name: {
+                    type: String,
+                },
+                marks: [
+                    {
+                        type: Number,
+                    }
+                ]
+            }
+        ]
     },
     { timestamps: true }
 );

@@ -24,8 +24,16 @@ const YearSection = () => {
                             <p>журнали</p>
                         </Link>
                     </td>
-                    <td className="pointer-cell">атестації</td>
-                    <td className="pointer-cell">види занять</td>
+                    <td className="pointer-cell">
+                        <Link to="/certifications">
+                            <p>атестації</p>
+                        </Link>
+                    </td>
+                    <td className="pointer-cell">
+                        <Link to="/typesOfOccupations ">
+                            <p>види занять</p>
+                        </Link>
+                    </td>
                 </tr>
                 <tr>
                     <td>2</td>

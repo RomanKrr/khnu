@@ -17,7 +17,8 @@ const Achievements = () => {
                     <tr>
                         <td></td>
                         <td colSpan={5} style={{ textAlign: 'center', fontStyle: 'italic' }}>
-                            Записи: (не знайдено)
+                            {/* Записи: (не знайдено) */}
+                            Немає досягнень, ти неміч
                         </td>
                     </tr>
                 </tbody>

@@ -4,9 +4,10 @@ import User from "../models/user.model.js";
 import bcrypt from "bcryptjs"
 
 export const signup = async (req, res) => {
-    const { fullName, email, password, profilePic, gradeBookId, facultyName, department, group, course } = req.body;
+    const { fullName, email, password, profilePic, gradeBookId, facultyName, department, group, course, subjects} = req.body;
     try {
-        if (!fullName || !email || !password || !gradeBookId || !facultyName || !department || !group || !course) {
+        // if (!fullName || !email || !password || !gradeBookId || !facultyName || !department || !group || !course) {
+        if (!fullName || !email || !password) {
             return res.status(400).json({ message: "Всі поля повинні бути заповнені" })
         }
 
@@ -36,7 +37,8 @@ export const signup = async (req, res) => {
             facultyName,
             department,
             group,
-            course
+            course,
+            subjects: subjects || []
         });
 
         if (newUser) {
@@ -48,6 +50,7 @@ export const signup = async (req, res) => {
                 fullName: newUser.fullName,
                 email: newUser.email,
                 profilePic: newUser.profilePic,
+                subjects: newUser.subjects,
             });
         } else {
             res.status(400).json({ message: "Invalid data" });

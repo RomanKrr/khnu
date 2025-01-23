@@ -27,6 +27,9 @@ import Notification from './pages/Notification'
 import WorkExperience from './pages/WorkExperience'
 import StudentOrders from './pages/StudentOrders'
 import HomeLayout from './components/HomeLayout'
+import Certifications from './pages/Certifications'
+import TypesOfOccupations from './pages/TypesOfOccupations'
+import Documents from './pages/Documents'
 
 function App() {
   const { authUser, checkAuth } = useAuthStore();
@@ -41,20 +44,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/allYears" element={<AllYears />} />
-          <Route path="/electiveDisciplines" element={<ElectiveDisciplines />} />
-          <Route path="/ratingOfSpecialties" element={<RatingOfSpecialties />} />
-          <Route path='/scheduleByGroups' element={<ScheduleByGroups />} />
-          <Route path='/scheduleByTeachers' element={<ScheduleByTeachers />} />
-          <Route path='/studentProfile' element={<StudentProfile />} />
-          <Route path='/notificationCenter' element={<NotificationCenter />} />
-          <Route path='/individualStudyPlan' element={<IndividualStudyPlan />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/achievements' element={<Achievements />} />
-          <Route path='/listOfJournals' element={<ListOfJournals />} />
+          <Route path="/electiveDisciplines" element={authUser ? <ElectiveDisciplines /> : <Navigate to="/login" /> } />
+          <Route path="/ratingOfSpecialties" element={authUser ? <RatingOfSpecialties /> : <Navigate to="/login" /> } />
+          <Route path='/scheduleByGroups' element={authUser ? <ScheduleByGroups /> : <Navigate to="/login" /> } />
+          <Route path='/scheduleByTeachers' element={authUser ? <ScheduleByTeachers /> : <Navigate to="/login" /> } />
+          <Route path='/studentProfile' element={authUser ? <StudentProfile /> : <Navigate to="/login" />} />
+          <Route path='/notificationCenter' element={authUser ? <NotificationCenter /> : <Navigate to="/login" /> } />
+          <Route path='/individualStudyPlan' element={authUser ? <IndividualStudyPlan /> : <Navigate to="/login" /> } />
+          <Route path='/portfolio' element={authUser ? <Portfolio /> : <Navigate to="/login" />} />
+          <Route path='/achievements' element={authUser ? <Achievements /> : <Navigate to="/login" />} />
+          <Route path='/listOfJournals' element={authUser ? <ListOfJournals /> : <Navigate to="/login" />} />
           <Route path='/journal' element={authUser ? <Journal /> : <Navigate to="/login" />} />
           <Route path='/notification' element={authUser ? <Notification /> : <Navigate to="/login" />} />
           <Route path='/workExperience' element={authUser ? <WorkExperience /> : <Navigate to="/login" />} />
           <Route path='/studentOrders' element={authUser ? <StudentOrders /> : <Navigate to="/login" />} />
+          <Route path='/certifications' element={authUser ? <Certifications /> : <Navigate to="/login" />} />
+          <Route path='/typesOfOccupations' element={authUser ? <TypesOfOccupations  /> : <Navigate to="/login" />} />
+          <Route path='/documents' element={authUser ? <Documents  /> : <Navigate to="/login" />} />
         </Route>
 
         <Route element={<BlankLayout />}>

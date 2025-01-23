@@ -9,7 +9,7 @@ const StudentDocs = () => {
                 <Link to="/studentOrders">
                     <p>Накази</p>
                 </Link>
-                <Link to="/studentProfile">
+                <Link to="/documents">
                     <p>Документи</p>
                 </Link>
                 <Link to="/workExperience">
